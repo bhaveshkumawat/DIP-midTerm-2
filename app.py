@@ -54,8 +54,8 @@ if st.button("Change Color"):
   result=import_and_predict(image)
   
 if st.button("About"):
-  st.header(" Sandeep Tuli")
-  st.subheader("Assistant Professor, Department of Computer Engineering")
+  st.header(" Bhavesh Kumawat")
+  st.subheader("Student, Department of Computer Engineering,PIET")
 html_temp = """
    <div class="" style="background-color:orange;" >
    <div class="clearfix">           
