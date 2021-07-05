@@ -1,5 +1,5 @@
 import cv2
-from  PIL import Image, ImageOps
+#from  PIL import Image, ImageOps
 import streamlit as st 
 from PIL import Image
 import pickle
