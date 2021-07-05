@@ -32,7 +32,7 @@ st.title("""
 file= st.file_uploader("Please upload image", type=("jpg", "png"))
 file2= st.file_uploader("Please upload second image", type=("jpg", "png"))
 operation = st.selectbox("Operations: ",
-                     ['Lgical XOR',"NOT"])
+                     ['Logical XOR',"NOT"])
 
 
 def import_and_predict(image,image2,operation):
