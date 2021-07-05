@@ -9,7 +9,7 @@ scipy>=0.15.1
 scikit-learn==0.24.1
 matplotlib>=1.4.3
 pandas>=0.19
-opencv-python-headless==4.2.0.32
+opencv-python==4.5.2.52
 PIL>=8.0.0
 streamlit
 
