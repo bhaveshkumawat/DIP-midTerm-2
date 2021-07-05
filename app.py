@@ -62,9 +62,9 @@ else:
 if file2 is None:
   st.text("Please upload an Image file")
 else:
-  file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
-  image2 = cv2.imdecode(file_bytes, 1)
-  st.image(file,caption='Uploaded Image.', use_column_width=True)
+  file_byte = np.asarray(bytearray(file2.read()), dtype=np.uint8)
+  image2 = cv2.imdecode(file_byte, 1)
+  st.image(file2,caption='Uploaded Image.', use_column_width=True)
     
 if st.button("Perform Operation"):
   result=import_and_predict(image,image2,operation)
