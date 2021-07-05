@@ -1,3 +1,5 @@
+import cv2
+from  PIL import Image, ImageOps
 import streamlit as st 
 from PIL import Image
 import pickle
@@ -32,8 +34,7 @@ R = st.slider('R', min_value=0, max_value=255, step=1)
 G = st.slider('G', min_value=0, max_value=255, step=1)
 B = st.slider('B', min_value=0, max_value=255, step=1)
 
-import cv2
-from  PIL import Image, ImageOps
+
 def import_and_predict(image_data):
   #img = image.load_img(image_data, target_size=(224, 224))
   #image = image.img_to_array(img)
