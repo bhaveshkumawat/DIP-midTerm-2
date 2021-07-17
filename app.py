@@ -42,7 +42,12 @@ def import_and_predict(image,kind,an):
   #img_reshap = preprocess_input(img_reshap)
   img2=cv2.resize(image,(512,512))
 
-
+  xmat = np.float32([[-1,  0, rows],
+                [0, 1, 1],
+                [0,  0, 1]])
+  ymat = np.float32([[-1,  0, cols],
+                [0, 1, 1],
+                [0,  0, 1]])
   an= int(an)
   rows, cols, dim = img2.shape 
   if kind == "Reflect-X":
