@@ -29,8 +29,8 @@ st.title("""
         Operations on Image
          """
          )
-file= st.file_uploader("Please upload image", type=("jpg", "png"))
-file2= st.file_uploader("Please upload second image", type=("jpg", "png"))
+file= st.file_uploader("Please upload image", type=("jpg", "png" , "tif"))
+file2= st.file_uploader("Please upload second image", type=("jpg", "png", "tif"))
 operation = st.selectbox("Operations: ",
                      ['Logical OR',"Logical AND"])
 
