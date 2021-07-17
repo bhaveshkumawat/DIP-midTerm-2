@@ -41,7 +41,10 @@ def import_and_predict(image,kind,an):
   #img_reshap= np.expand_dims(image, axis=0)
   #img_reshap = preprocess_input(img_reshap)
   img2=cv2.resize(image,(512,512))
+
+
   an= int(an)
+  rows, cols, dim = img2.shape 
   if kind == "Reflect-X":
    reflected = cv2.flip(img2, 0)
    st.image(reflected, use_column_width=True)
@@ -62,6 +65,7 @@ def import_and_predict(image,kind,an):
    cropped_img = img2[25:100, 50:200]
    st.image(cropped_img, use_column_width=True)
   elif kind=="Rotation":
+   
    angle = np.radians(an)
    #transformation matrix for Rotation
    M = np.float32([[np.cos(angle), -(np.sin(angle)), 0],
