@@ -18,7 +18,7 @@ html_temp = """
    <div class="clearfix">           
    <div class="col-md-12">
    <center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
-   <center><p style="font-size:30px;color:white;margin-top:10px;">Digital Image Processing lab- Mid Term 2</p></center> 
+   <center><p style="font-size:30px;color:white;margin-top:10px;">Digital Image Processing lab- EndTerm</p></center> 
    </div>
    </div>
    </div>
