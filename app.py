@@ -32,7 +32,7 @@ st.title("""
 file= st.file_uploader("Please upload image", type=("jpg", "png"))
 file2= st.file_uploader("Please upload second image", type=("jpg", "png"))
 operation = st.selectbox("Operations: ",
-                     ['Logical XOR',"NOT"])
+                     ['Logical OR',"Logical AND"])
 
 
 def import_and_predict(image,image2,operation):
@@ -42,14 +42,12 @@ def import_and_predict(image,image2,operation):
   #img_reshap = preprocess_input(img_reshap)
   image=cv2.resize(image,(512,512))
   image2=cv2.resize(image2,(512,512))
-  if operation=='Logical XOR':
-    img = cv2.bitwise_xor(image,image2)
+  if operation=='Logical OR':
+    img = cv2.bitwise_or(image,image2)
     st.image(img, use_column_width=True)
   else:
-    img = cv2.bitwise_not(image)
+    img = cv2.bitwise_and(image,image2)
     st.image(img, use_column_width=True)
-    img2 = cv2.bitwise_not(image2)
-    st.image(img2, use_column_width=True)
   
   return 0
 if file is None:
