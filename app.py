@@ -43,20 +43,20 @@ def import_and_predict(image,kind,an):
   img2=cv2.resize(image,(512,512))
   an= int(an)
   if kind == "Reflect-X":
-   reflected = cv.flip(img2, 0)
+   reflected = cv2.flip(img2, 0)
    st.image(reflected, use_column_width=True)
 
   elif kind == "Reflect-Y":
-   reflected = cv.warpPerspective(img2, ymat , (int(cols),int(rows)))
+   reflected = cv2.warpPerspective(img2, ymat , (int(cols),int(rows)))
    st.image(reflected, use_column_width=True)
 
   elif kind== "Translation":
    M1 = np.float32([[1, 0, 20], 
                 [0, 1, 100], 
                 [0, 0, 1]])
-   img3 = cv.warpPerspective(img2, M1, (img2.shape[1], img2.shape[0]))
+   img3 = cv2.warpPerspective(img2, M1, (img2.shape[1], img2.shape[0]))
    M = np.float32([[1, 0, 100], [0, 1, 20], [0, 0, 1]])
-   img3 = cv.warpPerspective(img2, M, (img2.shape[1], img2.shape[0]))
+   img3 = cv2.warpPerspective(img2, M, (img2.shape[1], img2.shape[0]))
    st.image(img3, use_column_width=True)
   elif kind=="Cropping":
    cropped_img = img2[25:100, 50:200]
@@ -68,7 +68,7 @@ def import_and_predict(image,kind,an):
             	[np.sin(angle), np.cos(angle), 0],
             	[0, 0, 1]])
    # apply a perspective transformation to the image
-   rotated_img = cv.warpPerspective(img2, M, ((cols),(rows)))
+   rotated_img = cv2.warpPerspective(img2, M, ((cols),(rows)))
    st.image(rotated_img, use_column_width=True)
   
   return 0
