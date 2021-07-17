@@ -41,6 +41,7 @@ def import_and_predict(image,kind,an):
   #img_reshap= np.expand_dims(image, axis=0)
   #img_reshap = preprocess_input(img_reshap)
   img2=cv2.resize(image,(512,512))
+  rows, cols, dim = img2.shape
 
   xmat = np.float32([[-1,  0, rows],
                 [0, 1, 1],
@@ -49,7 +50,7 @@ def import_and_predict(image,kind,an):
                 [0, 1, 1],
                 [0,  0, 1]])
   an= int(an)
-  rows, cols, dim = img2.shape 
+   
   if kind == "Reflect-X":
    reflected = cv2.flip(img2, 0)
    st.image(reflected, use_column_width=True)
