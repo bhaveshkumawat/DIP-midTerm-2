@@ -35,7 +35,7 @@ kind = st.selectbox("Operations: ",
 an = st.text_input("Enter Angle of rotation", "Type Here ...")
 
 
-def import_and_predict(image,operation,an):
+def import_and_predict(image,kind,an):
   #img = image.load_img(image_data, target_size=(224, 224))
   #image = image.img_to_array(img)
   #img_reshap= np.expand_dims(image, axis=0)
@@ -82,7 +82,7 @@ else:
 
     
 if st.button("Perform Operation"):
-  result=import_and_predict(image,operation,an)
+  result=import_and_predict(image,kind,an)
   
 if st.button("About"):
   st.header("Bhavesh Kumawat")
